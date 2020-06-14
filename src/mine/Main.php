@@ -44,15 +44,15 @@ class Main extends PluginBase implements Listener{
         $keyuncommon = "uncommon";
         $keymythic = "mythic";
         $number = 25;
-        if(mt_rand(1, 30) === $number) {
+        if(mt_rand(1, 4000) === $number) {
            $player->sendMessage("§7(§a!§7) §aYou found a $keycommon key");
            $this->getServer()->dispatchCommand(new \pocketmine\command\ConsoleCommandSender(), "key $keycommon 1 $p");
         }
-        if(mt_rand(1, 2300) === $number) {
+        if(mt_rand(1, 7000) === $number) {
            $player->sendMessage("§7(§a!§7) §aYou found a $keyuncommon key");
            $this->getServer()->dispatchCommand(new \pocketmine\command\ConsoleCommandSender(), "key $keyuncommon 1 $p");
         }
-        if(mt_rand(1, 7500) === $number) {
+        if(mt_rand(1, 15000) === $number) {
            $player->sendMessage("§7(§a!§7) §aYou found a $keymythic key");
            $this->getServer()->dispatchCommand(new \pocketmine\command\ConsoleCommandSender(), "key $keymythic 1 $p");
         }
