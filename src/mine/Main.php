@@ -40,7 +40,7 @@ class Main extends PluginBase{
         $keyuncommon = ("uncommon");
         $keymythic = ("mythic");
         $number = (25);
-        if(mt_rand(1, 1500) === $number) {
+        if(mt_rand(1, 30) === $number) {
            $player->sendMessage("§7(§a!§7) §aYou found a $keycommon key");
            $this->getServer()->dispatchCommand(new \pocketmine\command\ConsoleCommandSender(), "key $keycommon 1 $p");
         }
