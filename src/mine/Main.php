@@ -1,8 +1,8 @@
-    <?php
+<?php
     
-    namespace mine;
+namespace mine;
     
-    use pocketmine\entity\Effect;
+use pocketmine\entity\Effect;
 use pocketmine\entity\EffectInstance;
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\Command;
