@@ -13,7 +13,7 @@ use pocketmine\command\CommandExecutor;
 use pocketmine\utils\TextFormat as TF;
 use pocketmine\Player;
 use pocketmine\level\sound\PopSound;
-use pocketmine\event\Listeners;
+use pocketmine\event\Listener;
 use pocketmine\utils\TextFormat;
 use pocketmine\scheduler\Task;
 use pocketmine\level\Level;
@@ -29,7 +29,11 @@ use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\player\PlayerJoinEvent;
 use onebone\economyapi\EconomyAPI;
 
-class Main extends PluginBase{
+class Main extends PluginBase implements Listener{
+    
+    public function onEnable() {
+    $this->getServer()->getPluginManager()->registerEvents($this, $this);
+    }
     
     
     public function onBlockBreak(BlockBreakEvent $event) {
