@@ -40,7 +40,7 @@ class Main extends PluginBase implements Listener{
     
     public function onBlockBreak(BlockBreakEvent $event) {
         $player = $event->getPlayer();
-        $stone = BlockFactory::get(Block::STONE_BLOCK);
+        $stone = BlockFactory::get(STONE);
         $block = $event->getBlock();
         $p = $player->getName();
         $keycommon = "common";
