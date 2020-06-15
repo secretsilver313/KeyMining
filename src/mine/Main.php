@@ -58,6 +58,5 @@ class Main extends PluginBase implements Listener{
            $player->sendMessage("§7(§a!§7) §aYou found a Diamond key");
            $this->getServer()->dispatchCommand(new \pocketmine\command\ConsoleCommandSender(), "key Diamond 1 $p");
         }
-        }
     }
 }
