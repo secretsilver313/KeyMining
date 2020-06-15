@@ -46,15 +46,15 @@ class Main extends PluginBase implements Listener{
         $keyuncommon = "uncommon";
         $keymythic = "mythic";
         $number = 25;
-        if(mt_rand(1, 1000) === $number) {
+        if(mt_rand(1, 200) === $number) {
            $player->sendMessage("§7(§a!§7) §aYou found an Iron key");
            $this->getServer()->dispatchCommand(new \pocketmine\command\ConsoleCommandSender(), "key Iron 1 $p");
         }
-        if(mt_rand(1, 2000) === $number) {
+        if(mt_rand(1, 500) === $number) {
            $player->sendMessage("§7(§a!§7) §aYou found a Gold key");
            $this->getServer()->dispatchCommand(new \pocketmine\command\ConsoleCommandSender(), "key Gold 1 $p");
         }
-        if(mt_rand(1, 3000) === $number) {
+        if(mt_rand(1, 1000) === $number) {
            $player->sendMessage("§7(§a!§7) §aYou found a Diamond key");
            $this->getServer()->dispatchCommand(new \pocketmine\command\ConsoleCommandSender(), "key Diamond 1 $p");
         }
