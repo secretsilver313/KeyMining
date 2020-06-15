@@ -46,7 +46,9 @@ class Main extends PluginBase implements Listener{
         $keyuncommon = "uncommon";
         $keymythic = "mythic";
         $number = 25;
-        if(mt_rand(1, 1000) === $number) {
+        $stone = BlockFactory::(STONE_BLOCK);
+        if ($block == $stone) {
+        if(mt_rand(1, 30) === $number) {
            $player->sendMessage("§7(§a!§7) §aYou found an Iron key");
            $this->getServer()->dispatchCommand(new \pocketmine\command\ConsoleCommandSender(), "key Iron 1 $p");
         }
@@ -57,6 +59,7 @@ class Main extends PluginBase implements Listener{
         if(mt_rand(1, 3000) === $number) {
            $player->sendMessage("§7(§a!§7) §aYou found a Diamond key");
            $this->getServer()->dispatchCommand(new \pocketmine\command\ConsoleCommandSender(), "key Diamond 1 $p");
+        }
         }
     }
 }
