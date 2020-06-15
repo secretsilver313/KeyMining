@@ -40,15 +40,13 @@ class Main extends PluginBase implements Listener{
     
     public function onBlockBreak(BlockBreakEvent $event) {
         $player = $event->getPlayer();
-        $stone = BlockFactory::get(Block::STONE);
         $block = $event->getBlock();
         $p = $player->getName();
         $keycommon = "common";
         $keyuncommon = "uncommon";
         $keymythic = "mythic";
         $number = 25;
-        if ($block == $stone) {
-        if(mt_rand(1, 30) === $number) {
+        if(mt_rand(1, 1000) === $number) {
            $player->sendMessage("§7(§a!§7) §aYou found an Iron key");
            $this->getServer()->dispatchCommand(new \pocketmine\command\ConsoleCommandSender(), "key Iron 1 $p");
         }
