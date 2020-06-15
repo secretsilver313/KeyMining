@@ -28,7 +28,7 @@ use pocketmine\tile\Tile;
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\block\BlockFactory;
-use pocketmine\block\Stone;
+use pocketmine\block\Block;
 use onebone\economyapi\EconomyAPI;
 
 class Main extends PluginBase implements Listener{
@@ -40,7 +40,7 @@ class Main extends PluginBase implements Listener{
     
     public function onBlockBreak(BlockBreakEvent $event) {
         $player = $event->getPlayer();
-        $stone = BlockFactory::get(STONE);
+        $stone = BlockFactory::get(Block::STONE_Block);
         $block = $event->getBlock();
         $p = $player->getName();
         $keycommon = "common";
