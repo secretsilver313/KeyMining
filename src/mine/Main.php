@@ -27,6 +27,8 @@ use pocketmine\event\entity\ProjectileHitEvent;
 use pocketmine\tile\Tile;
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\player\PlayerJoinEvent;
+use pocketmine\block\BlockFactory;
+use pocketmine\block\Stone;
 use onebone\economyapi\EconomyAPI;
 
 class Main extends PluginBase implements Listener{
@@ -44,17 +46,17 @@ class Main extends PluginBase implements Listener{
         $keyuncommon = "uncommon";
         $keymythic = "mythic";
         $number = 25;
-        if(mt_rand(1, 4000) === $number) {
-           $player->sendMessage("§7(§a!§7) §aYou found a $keycommon key");
-           $this->getServer()->dispatchCommand(new \pocketmine\command\ConsoleCommandSender(), "key $keycommon 1 $p");
+        if(mt_rand(1, 1000) === $number) {
+           $player->sendMessage("§7(§a!§7) §aYou found an Iron key");
+           $this->getServer()->dispatchCommand(new \pocketmine\command\ConsoleCommandSender(), "key Iron 1 $p");
         }
-        if(mt_rand(1, 7000) === $number) {
-           $player->sendMessage("§7(§a!§7) §aYou found a $keyuncommon key");
-           $this->getServer()->dispatchCommand(new \pocketmine\command\ConsoleCommandSender(), "key $keyuncommon 1 $p");
+        if(mt_rand(1, 2000) === $number) {
+           $player->sendMessage("§7(§a!§7) §aYou found a Gold key");
+           $this->getServer()->dispatchCommand(new \pocketmine\command\ConsoleCommandSender(), "key Gold 1 $p");
         }
-        if(mt_rand(1, 15000) === $number) {
-           $player->sendMessage("§7(§a!§7) §aYou found a $keymythic key");
-           $this->getServer()->dispatchCommand(new \pocketmine\command\ConsoleCommandSender(), "key $keymythic 1 $p");
+        if(mt_rand(1, 3000) === $number) {
+           $player->sendMessage("§7(§a!§7) §aYou found a Diamond key");
+           $this->getServer()->dispatchCommand(new \pocketmine\command\ConsoleCommandSender(), "key Diamond 1 $p");
         }
     }
 }
