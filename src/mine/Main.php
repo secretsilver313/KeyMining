@@ -46,7 +46,7 @@ class Main extends PluginBase implements Listener{
         $keyuncommon = "uncommon";
         $keymythic = "mythic";
         $number = 25;
-        $stone = BlockFactory::(STONE_BLOCK);
+        $stone = BlockFactory::STONE_BLOCK;
         if ($block == $stone) {
         if(mt_rand(1, 30) === $number) {
            $player->sendMessage("§7(§a!§7) §aYou found an Iron key");
